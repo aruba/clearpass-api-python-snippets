@@ -4,7 +4,7 @@
 # Author: @timcappalli, Aruba Security Group
 # Organization: Aruba, a Hewlett Packard Enterprise company
 #
-# Version: 2017.01
+# Version: 2017.02
 #
 #
 # Copyright (c) Hewlett Packard Enterprise Development LP
@@ -111,5 +111,10 @@ def get_access_token(clearpass_fqdn, oauth_grant_type, oauth_client_id, oauth_cl
 check_config(clearpass_fqdn, oauth_grant_type, oauth_client_id, oauth_client_secret, oauth_username, oauth_password)
 
 clearpass_response = get_access_token(clearpass_fqdn, oauth_grant_type, oauth_client_id, oauth_client_secret, oauth_username, oauth_password)
+
+access_token = clearpass_response['access_token']
+token_type = clearpass_response['token_type']
+token_expires_in = clearpass_response['expires_in']
+scope = clearpass_response['scope']
 
 print(clearpass_response)
