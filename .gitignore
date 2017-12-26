@@ -114,3 +114,4 @@ tmtagsHistory
 *.sublime-project
 *.sublime-workspace
 .bundle
+*.cfgdev
